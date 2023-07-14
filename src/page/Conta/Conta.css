@@ -1,0 +1,59 @@
+.conta-main {
+    height: 90vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom right, #b71cfa, #8d02c9, #57027c, #2b013d, #1f012c, rgb(15, 15, 15), black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.card {
+    background-color: white;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10em;
+}
+
+.codigo-conta-input {
+    width: 90%;
+    padding: 1em;
+    border: 1px solid #971c96;
+    border-radius: 4px;
+
+}
+
+.codigo-conta-input:focus {
+    border-color: #971c96;
+    outline: none;
+}
+
+
+.entrar-button {
+    margin-top: 2em;
+
+    color: white;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #7600a9;
+    border: none;
+    width: 150px;
+    max-width: 150px;
+    float: right;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+.search-button:hover,
+.search-button:active {
+    background-color: #dd6cd9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

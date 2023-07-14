@@ -1,0 +1,26 @@
+.app-bar {
+    display: flex;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    background-color:#7600a9;
+    border: #7600a9 1px solid;
+    height: 60px;
+    padding: 0 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .app-bar__title {
+    font-size: 24px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .pages-bar{
+    display: flex;
+    margin-right: 64%;
+    width: 200px;
+
+
+  }

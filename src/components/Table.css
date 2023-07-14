@@ -1,0 +1,43 @@
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 5%
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+  .table {
+    font-size: 14px;
+  }
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  border-radius: 10px;
+  margin: 0 0.5rem;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  background-color: #b23ae6;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #7600a9;
+}
