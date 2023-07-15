@@ -82,7 +82,7 @@ const useTransacoes = () => {
       showError(formatarErrorResponse(error));
     }
 
-    delayToLoading(1500, () => {
+    delayToLoading(1000, () => {
       setIsLoading(false);
     });
   };
@@ -105,7 +105,7 @@ const useTransacoes = () => {
       showError(formatarErrorResponse(error));
     }
 
-    delayToLoading(1500, () => {
+    delayToLoading(1000, () => {
       setIsLoading(false);
     });
   };
@@ -125,7 +125,7 @@ const useTransacoes = () => {
       showError(formatarErrorResponse(error));
     }
 
-    delayToLoading(1500, () => {
+    delayToLoading(1000, () => {
       setIsLoading(false);
     });
   };
@@ -134,12 +134,16 @@ const useTransacoes = () => {
     const url = `/transferencias/saldo-total/${numeroConta}`;
 
     try {
-      const saldoTotalRetornado: number = await getData(url);
+      var saldoTotalRetornado: number = await getData(url);
 
-      debugger
+      if (saldoTotalRetornado == undefined) {
+        saldoTotalRetornado = 0.0;
+      }
 
       setSaldoTotal(saldoTotalRetornado);
+
     } catch (error: any) {
+      setSaldoTotal(0.0)
       showError(formatarErrorResponse(error));
     }
   };

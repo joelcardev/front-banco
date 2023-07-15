@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./Table.css";
 import Loading from "./loading/LoadingComponent";
-import { formatDateNormal } from "../utils/funcoesUtils";
+import {
+  formatDateNormal,
+  formatarMoedaParaBrasil,
+} from "../utils/funcoesUtils";
 
 interface TableProps {
   data: Array<{
@@ -34,7 +37,7 @@ const Table: React.FC<TableProps> = ({ data, isLoading }) => {
       return currentItems.map((item, index) => (
         <tr key={index}>
           <td>{formatDateNormal(item.dataTransferencia)}</td>
-          <td>{item.valor}</td>
+          <td>{formatarMoedaParaBrasil(parseFloat(item?.valor))}</td>
           {item.tipo === "SAQUE" ? (
             <td style={{ color: "red" }}>{item.tipo}</td>
           ) : (

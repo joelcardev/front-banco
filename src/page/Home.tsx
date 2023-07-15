@@ -4,8 +4,11 @@ import InputMask from "react-input-mask";
 import { useParams } from "react-router-dom";
 import Table from "../components/Table";
 import useTransacoes from "../hooks/useTransacoes";
-import { formatDateWithZone } from "../utils/funcoesUtils";
-import { showError } from "../utils/messages";
+import {
+  formatDateWithZone,
+  formatarMoedaParaBrasil,
+} from "../utils/funcoesUtils";
+import { showError, showInfor } from "../utils/messages";
 import { ValidarDuasDataInicioFim } from "../utils/validation";
 import "./Home.css";
 
@@ -35,10 +38,21 @@ function Home() {
 
   async function pesquisarTransacao() {
     const temTodosFiltros = dataFim && dataInicio && nomeTransacionado;
+
     const temSomenteNomeTransacionado =
       !dataFim && !dataInicio && nomeTransacionado;
+
     const temSomenteDataInicioEFim =
       dataFim && dataInicio && !nomeTransacionado;
+
+    const seSomenteUmaDataTaPresente =
+      (!dataFim && dataInicio) || (!dataInicio && dataFim);
+
+    if (seSomenteUmaDataTaPresente) {
+      return showInfor(
+        "Para pesquisar um período digite a data inicio e data fim."
+      );
+    }
 
     if (temTodosFiltros) {
       let dtInicio: string = formatDateWithZone(dataInicio);
@@ -151,11 +165,11 @@ function Home() {
           <div className="direction-balance">
             <div className="balance-item">
               <strong style={{ marginRight: "5px" }}>Saldo total: </strong>
-              <p>R$ {saldoTotal?.toFixed(2)}</p>
+              <p>{formatarMoedaParaBrasil(saldoTotal)}</p>
             </div>
             <div className="balance-item">
               <strong style={{ marginRight: "5px" }}>Saldo do Período: </strong>
-              <p>R$ {saldoPeriodo?.toFixed(2)}</p>
+              <p>{formatarMoedaParaBrasil(saldoPeriodo)}</p>
             </div>
           </div>
           <Table data={transacoes} isLoading={isLoading} />
