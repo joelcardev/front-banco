@@ -19,7 +19,7 @@ Os numeros de contas disponiveis são 1 e 2.
   ![image](https://github.com/joelcardev/front-banco/assets/25753745/712f0888-0a4f-4a8a-8d32-9d359bcfe5d2)
 
 
-Apos isso o usuario é destinado a parte das transaçoes, onde mostra a tabela e o filtros que são feito em data inicio e data fim e o nome do operador transacionado
+Após isso o usuario é destinado a parte das transaçoes, onde mostra a tabela e o filtros que são feitos em data inicio e data fim e o nome do operador transacionado
 
 - url /conta/1  ou /conta/2
 
