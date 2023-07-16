@@ -168,17 +168,17 @@ const useTransacoes = () => {
 
   return {
     transacoes,
+    codigoConta,
+    saldoPeriodo,
+    saldoTotal,
+    isLoading,
+    setCodigoConta,
     getTodasTransferencias,
     getTransferenciasByNomeOperador,
     getTransferenciasByNumeroConta,
     getTransferenciasByPeriodo,
     getTransferenciaPorTodosFiltros,
     getSaldoTotalPorNumeroConta,
-    codigoConta,
-    setCodigoConta,
-    saldoPeriodo,
-    saldoTotal,
-    isLoading,
   };
 };
 
