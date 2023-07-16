@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { showInfor } from "../../utils/messages";
-import "./Conta.css";
 import useTransacoes from "../../hooks/useTransacoes";
 import { justNumber } from "../../utils/funcoesUtils";
+import { showInfor } from "../../utils/messages";
+import "./Conta.css";
 
 function Conta() {
 

@@ -37,6 +37,7 @@ function Home() {
   }, []);
 
   async function pesquisarTransacao() {
+    
     const temTodosFiltros = dataFim && dataInicio && nomeTransacionado;
 
     const temSomenteNomeTransacionado =

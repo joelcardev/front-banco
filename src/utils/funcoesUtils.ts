@@ -8,7 +8,6 @@ export function delayToLoading(time: number, callback: () => void): void {
 
 
 export function formatDateWithZone(dateStr: string): string {
-  debugger
   const date = moment(dateStr);
   const formattedDate = date.format('YYYY-DD-MM HH:mm:ss Z');
   return formattedDate;
